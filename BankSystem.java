@@ -1,23 +1,60 @@
 package bankapp;
-
+import java.util.Scanner;
 public class BankSystem {
 
 	public static void main(String[] args) {
-		do {
-			switch() {
-			
+		Scanner sc = new Scanner(System.in);
+		int ma,mb,mc;
+		do {    menua();
+				ma = sc.nextInt();
+			switch(ma) {
+			case 1: //Customer
+					do{
+				    menub();
+					mb = sc.nextInt();
+						switch(mb) {
+						case 1:
+						case 2://Savings/Credit
+							  /* if(mb == 1) {
+								   //set acctype to Savings
+							   }
+							   if(mb == 2) {
+								   //set acctype to Credit
+							   } */
+								do {
+									menuc();
+									mc = sc.nextInt();
+									switch(mc) {
+									case 1:break;
+									case 2:break;
+									case 3:break;
+									case 4:break;
+									case 5:break;
+									default:System.out.println("Invalid Choice");break;
+									}
+								}while(mc!=5);
+								break;
+						case 3:break;
+						default:System.out.println("Invalid Choice");break;
+						}
+					}while(mb!=3);
+					break;
+			case 2://Bank Authority =>just displays account details
+					break;
+			case 3:break;
+			default:System.out.println("Invalid Choice");break;
 			}
-		}while();
+		}while(ma!=3);
 	}
 	
-	public void menua() {
+	public static void menua() {
 		System.out.println("1.Customer");
 		System.out.println("2.Bank Authority");
 		System.out.println("3.Exit");
 		System.out.println("Enter ur choice:");
 	}
 	
-	public void menub() {
+	public static void menub() {
 		System.out.println("Enter ur Account Type:");
 		System.out.println("1.Savings Account");
 		System.out.println("2.Credit Account");
@@ -25,7 +62,7 @@ public class BankSystem {
 		System.out.println("Enter ur choice:");
 	}
 	
-	public void menuc() {
+	public static void menuc() {
 		System.out.println("1.View My Account Details");
 		System.out.println("2.Deposit");
 		System.out.println("3.Withdraw");

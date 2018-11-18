@@ -3,8 +3,14 @@ import java.util.Scanner;
 public class BankSystem {
 
 	public static void main(String[] args) {
+		
+		SavingAcc sa[] = new SavingAcc[10];
+		CreditAcc ca[] = new CreditAcc[10];
 		Scanner sc = new Scanner(System.in);
 		int ma,mb,mc;
+		int scount = -1;
+		int ccount = -1;
+		
 		do {    menua();
 				ma = sc.nextInt();
 			switch(ma) {
@@ -15,20 +21,27 @@ public class BankSystem {
 						switch(mb) {
 						case 1:
 						case 2://Savings/Credit
-							  /* if(mb == 1) {
-								   //set acctype to Savings
-							   }
-							   if(mb == 2) {
-								   //set acctype to Credit
-							   } */
+							 
 								do {
 									menuc();
 									mc = sc.nextInt();
 									switch(mc) {
-									case 1:break;
-									case 2:break;
-									case 3:break;
-									case 4:break;
+									case 1://view account details
+										break;
+									case 2://deposit
+										break;
+									case 3://withdraw
+										break;
+									case 4://create new account
+										/*  if(mb == 1) {
+												++scount;
+									   			//set acctype to Savings
+								   			}
+								   			if(mb == 2) {
+								   				++ccount;
+									   			//set acctype to Credit
+								   			} */
+										break;
 									case 5:break;
 									default:System.out.println("Invalid Choice");break;
 									}
